@@ -18,13 +18,13 @@ services:
     volumes:
       - ./openapi/openapi.json:/openapi.json
 
-  openapi:
-    container_name: template-client-openapi
+  swagger:
+    container_name: omusubi-front-swagger
     image: swaggerapi/swagger-ui:latest
     tty: true
     volumes:
-      - "./openapi/:/var/openapi"
+      - "./swagger/:/var/swagger"
     environment:
-      SWAGGER_JSON: /var/openapi/openapi.json
+      SWAGGER_JSON: /var/swagger/swagger.json
     ports:
-      - "8088:8080"
+      - "8080:8080"

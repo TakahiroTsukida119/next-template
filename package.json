@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "hygen": "hygen component new",
-    "generate-api": "openapi-generator-cli generate -g typescript-axios  -c ./openapi.config.yml -i ./openapi/openapi.json -o ./api",
+    "codegen": "node codegen.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -25,7 +25,6 @@
     "typescript": "5.0.3"
   },
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "^2.5.2",
     "@storybook/addon-essentials": "^7.0.2",
     "@storybook/addon-interactions": "^7.0.2",
     "@storybook/addon-links": "^7.0.2",
@@ -36,6 +35,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-storybook": "^0.6.11",
+    "openapi-typescript-codegen": "^0.23.0",
     "prettier": "^2.8.7",
     "storybook": "^7.0.2",
     "stylelint-config-prettier": "^9.0.5"
