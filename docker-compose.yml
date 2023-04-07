@@ -1,0 +1,30 @@
+version: "3"
+services:
+#  next:
+#    build: ".docker/node"
+#    container_name: 'template-next'
+#    tty: true
+#    volumes:
+#      - ".:/app"
+#    ports:
+#      - "3000:3000"
+
+  uiapimock:
+    image: stoplight/prism:3
+    container_name: 'template-uiapimock'
+    ports:
+      - '8000:4010'
+    command: mock -h 0.0.0.0 /openapi.json
+    volumes:
+      - ./openapi/openapi.json:/openapi.json
+
+  openapi:
+    container_name: template-client-openapi
+    image: swaggerapi/swagger-ui:latest
+    tty: true
+    volumes:
+      - "./openapi/:/var/openapi"
+    environment:
+      SWAGGER_JSON: /var/openapi/openapi.json
+    ports:
+      - "8088:8080"

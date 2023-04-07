@@ -1,0 +1,2 @@
+modelPropertyNaming: 'snake_case'
+enumPropertyNaming: 'snake_case'
