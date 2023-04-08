@@ -12,6 +12,13 @@ module.exports = [
   },
   {
     type: 'toggle',
+    name: 'scss',
+    message: 'scssファイルを作成しますか？',
+    enabled: 'Yes',
+    disabled: 'No',
+  },
+  {
+    type: 'toggle',
     name: 'spec',
     message: 'テストファイルを作成しますか？',
     enabled: 'Yes',
@@ -24,4 +31,4 @@ module.exports = [
     enabled: 'Yes',
     disabled: 'No',
   },
-]
+];

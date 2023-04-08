@@ -16,6 +16,7 @@ const main = async () => {
     output: outputDir,
     httpClient: 'fetch',
     modelPropertyNaming: 'camelCase',
+    indent: '2',
   });
 };
 
