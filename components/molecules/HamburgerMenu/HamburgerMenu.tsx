@@ -1,41 +1,39 @@
 import { useState } from 'react';
-import styles from './HamburgerMenu.module.scss';
-
-interface HamburgerProps {
-  isOpen: boolean;
-}
 
 export const HamburgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isActiveMenu, setIsActiveMenu] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const handleHamburgerClick = () => {
+    setIsActiveMenu(!isActiveMenu);
   };
 
   return (
     <>
-      <div
-        className={`${styles.hamburgerIcon} ${isOpen ? styles.open : ''}`}
-        onClick={toggleMenu}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
-        <a className={styles.menuItem} href="#">
-          Home
-        </a>
-        <a className={styles.menuItem} href="#">
-          About
-        </a>
-        <a className={styles.menuItem} href="#">
-          Services
-        </a>
-        <a className={styles.menuItem} href="#">
-          Contact
-        </a>
-      </div>
+      <header className="hamburger-menu">
+        <section className="section">
+          <div className="content">
+            <img className="logo" src="#" alt="#" />
+            <div className="hamburger-btn" onClick={handleHamburgerClick}>
+              <div className={`wrap ${isActiveMenu ? '-active' : ''}`}>
+                <span className="span ${isActiveMenu ? '-active' : ''}" />
+              </div>
+            </div>
+          </div>
+          <div className={`header-menu ${isActiveMenu ? '-active' : ''}`}>
+            <div className="lists">
+              <div className="link">
+                <img className="icon" src="/icon/logout.svg" alt="logout" />
+                ログアウト
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          style={{ display: isActiveMenu ? 'block' : 'none' }}
+          className="mask"
+          onClick={handleHamburgerClick}
+        ></div>
+      </header>
     </>
   );
 };

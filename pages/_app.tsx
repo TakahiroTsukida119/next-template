@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import '@/styles/main.scss';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { HamburgerMenu } from '@/components/molecules/HamburgerMenu/HamburgerMenu';

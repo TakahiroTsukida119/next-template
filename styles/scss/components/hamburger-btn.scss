@@ -1,0 +1,54 @@
+.hamburger-btn {
+  width: fit-content;
+
+  > .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  > .wrap.-active {
+    top: 10px;
+    height: 24px;
+    background-color: unset;
+  }
+
+  > .wrap > .span,
+  > .wrap > .span::before,
+  > .wrap > .span::after {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 3px;
+    content: '';
+    background-color: #6C6C6C;
+    border-radius: 3px;
+    transition: all 0.3s;
+  }
+
+  > .wrap > .span::before {
+    bottom: 8px;
+  }
+
+  > .wrap > .span::after {
+    top: 8px;
+  }
+
+  > .wrap > .span.-active {
+    background-color: transparent;
+  }
+
+  > .wrap > .span.-active::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  > .wrap > .span.-active::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}

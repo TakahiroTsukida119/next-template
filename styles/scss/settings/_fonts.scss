@@ -1,0 +1,18 @@
+// safari の場合16px以下に設定すると自動的にズームされてしまうため
+// 16px以下に設定したい場合はtransformなどで対応する
+
+$title: 2.7rem;
+$extra-extra-large: 2.1rem;
+$extra-large: 2rem;
+$large: 1.8rem;
+$default-font-size: 1.6rem;
+$small: 1.4rem;
+$extra-small: 1.1rem;
+
+// Helvetica Neue = macOs,ios(欧文)
+// Hiragino Kaku Gothic ProN = macOs,ios(和文)
+// Arial = windows(欧文)
+// Meiryo = windows(和文)
+// androidその他 = sans-serif
+$font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Arial', 'Meiryo',
+  sans-serif;

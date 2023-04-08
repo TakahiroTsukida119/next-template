@@ -1,0 +1,100 @@
+._pc-only {
+  display: none !important;
+  @include respond(tab-port) {
+    display: block !important;
+  }
+}
+
+._pc-only-flex {
+  display: none !important;
+  @include respond(tab-port) {
+    display: flex !important;
+  }
+}
+
+._sp-only {
+  display: block !important;
+  @include respond(tab-port) {
+    display: none !important;
+  }
+}
+
+._sp-only-flex {
+  display: flex !important;
+  @include respond(tab-port) {
+    display: none !important;
+  }
+}
+
+// NOTE: 下記8つは余白用
+@for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
+  ._ml-#{$i} {
+    margin-left: #{$i}0px !important;
+  }
+}
+
+@for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
+  ._mr-#{$i} {
+    margin-right: #{$i}0px !important;
+  }
+}
+
+@for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
+  ._mt-#{$i} {
+    margin-top: #{$i}0px !important;
+  }
+}
+
+@for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
+  ._mb-#{$i} {
+    margin-bottom: #{$i}0px !important;
+  }
+}
+
+@for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
+  ._pl-#{$i} {
+    padding-left: #{$i}0px !important;
+  }
+}
+
+@for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
+  ._pr-#{$i} {
+    padding-right: #{$i}0px !important;
+  }
+}
+
+@for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
+  ._pt-#{$i} {
+    padding-top: #{$i}0px !important;
+  }
+}
+
+@for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
+  ._pb-#{$i} {
+    padding-bottom: #{$i}0px !important;
+  }
+}
+
+._display-flex {
+  display: flex !important;
+}
+
+._mr-2-4 {
+  margin-right: 24px !important;
+}
+
+._pb-88 {
+  padding-bottom: 88px !important;
+}
+
+._pre-line {
+  white-space: pre-line;
+}

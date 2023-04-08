@@ -1,0 +1,62 @@
+.header-menu {
+  position: fixed;
+  right: 0;
+  z-index: 2;
+  width: 400px;
+  max-height: 100vh;
+  overflow-y: scroll;
+  visibility: hidden;
+  background-color: $achromatic-white;
+  box-shadow: none;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateX(100%);
+  @include respond(phone) {
+    width: 100vw;
+  }
+
+  &.-active {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
+  }
+
+  > .head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 78px;
+    padding: 16px;
+    background-color: $neutral-gray;
+  }
+
+  > .head > .top {
+    margin-left: 13px;
+    font-size: 1.6rem;
+    color: $text-primary-black;
+    text-decoration: none;
+  }
+
+  > .lists {
+    height: 100%;
+    padding: 24px 16px;
+    overflow-y: scroll;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  > .lists > .link {
+    position: relative;
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    margin-bottom: 16px;
+    color: $text-black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  > .lists > .link:last-of-type {
+    margin-bottom: 0;
+  }
+}
