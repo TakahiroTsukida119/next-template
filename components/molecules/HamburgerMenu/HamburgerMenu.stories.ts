@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { HamburgerMenu } from '@/components/molecules/HamburgerMenu/HamburgerMenu';
+import '@/styles/main.scss';
 
 const meta: Meta<typeof HamburgerMenu> = {
   title: 'molecules/HamburgerMenu',
@@ -13,6 +14,4 @@ const meta: Meta<typeof HamburgerMenu> = {
 export default meta;
 type Story = StoryObj<typeof HamburgerMenu>;
 
-export const example: Story = {
-  args: {},
-};
+export const example: Story = {};
