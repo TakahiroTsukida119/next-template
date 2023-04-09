@@ -3,7 +3,7 @@ module.exports = [
     type: 'select',
     name: 'category',
     message: 'コンポーネントのディレクトリを選択してください',
-    choices: ['atoms', 'molecules', 'organisms', 'page'],
+    choices: ['atoms', 'molecules', 'organisms'],
   },
   {
     type: 'input',

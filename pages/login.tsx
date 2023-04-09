@@ -1,7 +1,7 @@
-export default function Login() {
+export default function Login(): JSX.Element {
   return (
     <>
-      <div></div>
+      <div className="login-page-container"></div>
     </>
   );
 }

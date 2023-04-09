@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 
 export const HamburgerMenu = () => {
   const [isActiveMenu, setIsActiveMenu] = useState(false);
@@ -22,7 +23,13 @@ export const HamburgerMenu = () => {
           <div className={`header-menu ${isActiveMenu ? '-active' : ''}`}>
             <div className="lists">
               <div className="link">
-                <img className="icon" src="/icon/logout.svg" alt="logout" />
+                <Image
+                  className="icon"
+                  src="/icon/logout.svg"
+                  alt="logout"
+                  width={24}
+                  height={24}
+                />
                 ログアウト
               </div>
             </div>
