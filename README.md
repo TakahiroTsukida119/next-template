@@ -5,74 +5,67 @@ Next.jsのTemplateリポジトリです
 
 - node ^16.0.0
 - Next.js ^13.2.4
-- OpenApi ^3.0.2
 
 
 ## How to
-
-- clone
-
-- install
+### install
 
 ```bash
 $ npm install
 ```
 
-- モックサーバー起動
+### モックサーバー（`localhost:8000`）
 ```bash
-make up
+$ docker-compose up -d uiapimock
 ```
-以下のコンテナが立ちます
-- Nodeコンテナ（開発環境としてDockerを使用する場合はこちらを使用してください。もちろん使わなくてもOKです）
-- モックサーバー（`localhost:8000`）
-- Swagger UI<br />
-  `localhost:8088`へブラウザでアクセス
 
+### storybook（`localhost:6006`）
+```bash
+$ npm run storybook
+```
 
-- ローカル開発（`localhost:3000`）
+### swagger ui（`localhost:8080`）
+```bash
+$ docker-compose up -d swagger
+```
+
+### ローカル開発（`localhost:3000`）
 ```bash
 $ npm run dev
 ```
 
-- コンポーネントの新規作成
+### コンポーネントの新規作成
 
 ```bash
 npm run hygen
 ```
-基本的にはテストファイルは生成してください。
+基本的にはテストファイルとstoriesファイルは生成してください。
 
 
-- OpenApiの更新
+### SwaggerGeneratorの更新
 ```bash
 npm run generate-api
 ```
 
-- Nodeコンテナ内に入る
-```
-make shell
-```
-
-
-- 単体テスト
+### 単体テスト（jest）
 ```bash
 npm run test
 ```
 
 
-- 本番用 build とサーバーを起動
-
+### 本番用 build とサーバーを起動
 ```bash
 $ npm run build
 $ npm run start
 ```
 
-- 静的ファイル作成（production build）
+### 静的ファイル作成（production build）
 
 ```bash
 $ npm run generate:prod
 ```
 
-## Docker短縮コマンド
+### Docker短縮コマンド
 - ビルド
 ```bash
 make buid
